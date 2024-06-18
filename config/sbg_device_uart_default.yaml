@@ -24,7 +24,7 @@ confWithRos: false
 # Uart configuration
 uartConf:
   # Port Name
-  portName: "/dev/ttyUSB0"
+  portName: "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller-if00-port0"
 
   # Baude rate (4800 ,9600 ,19200 ,38400 ,115200 [default],230400 ,460800 ,921600)
   baudRate: 115200
@@ -303,16 +303,16 @@ output:
 
 rtcm:
   # Should ros driver subscribe to RTCM topic
-  subscribe: false
+  subscribe: true
   # Topic on which RTCM is published
   topic_name: rtcm
   # Namespace where topic is published
-  namespace: ntrip_client
+  namespace: ""
 
 nmea:
   # Should ros driver publish NMEA string
-  publish: false
+  publish: true
   # Topic on which to publish nmea data
   topic_name: nmea
   # Namespace where to publish topic
-  namespace: ntrip_client
+  namespace: ""
